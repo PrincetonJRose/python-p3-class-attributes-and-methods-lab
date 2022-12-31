@@ -21,14 +21,14 @@ class Song:
         if genre not in cls.genres:
             cls.genres.append( genre.title() )
             cls.genre_count[ genre ] =  1
-        else: cls.genre_count[ genre ] = cls.genre_count[ genre ] + 1
+        else: cls.genre_count[ genre ] += 1
 
     @classmethod
     def add_to_artists( cls, artist ):
         if artist not in cls.artists:
             cls.artists.append( artist )
             cls.artist_count[ artist ] = 1
-        else: cls.artist_count[ artist ] = cls.artist_count[ artist ] + 1
+        else: cls.artist_count[ artist ] += 1
     
     @classmethod
     def add_song_to_all( cls, song ):
